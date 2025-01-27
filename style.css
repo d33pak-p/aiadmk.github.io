@@ -1,0 +1,327 @@
+:root {
+    --primary-color: #d32f2f;
+    /* Red from KVT Flag */
+    --secondary-color: #ffeb3b;
+    /* Yellow from KVT Flag */
+    --background-color: #f5f5f5;
+    --text-color: #333;
+    --hover-color: #b71c1c;
+    --button-bg-color: var(--primary-color);
+    --button-text-color: white;
+    --header-bg-color: var(--primary-color);
+    --footer-bg-color: var(--secondary-color);
+    --chart-color: var(--secondary-color);
+    --highlight-color: var(--primary-color);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    /* Disable page scrolling */
+}
+
+
+header {
+    /* background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color), var(--primary-color)); */
+    background: linear-gradient(0deg, #ff0000 10%, #ffffff 72%, #000000 34%);
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 24px;
+    margin-left: 20px;
+    color: darkgreen;
+}
+
+header nav a {
+    color: white;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+#sidebar {
+    width: 250px;
+    height: 82vh;
+    /* Full viewport height */
+    background-color: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-right: 20px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    /* For Firefox */
+    scrollbar-color: #888 #f1f1f1;
+    /* Thumb color and track color */
+}
+
+/* Custom Scrollbar for WebKit browsers */
+#sidebar::-webkit-scrollbar {
+    width: 8px;
+    /* Scrollbar width */
+}
+
+#sidebar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Track color */
+}
+
+#sidebar::-webkit-scrollbar-thumb {
+    background-color: #888;
+    /* Thumb color */
+    border-radius: 10px;
+    /* Rounded edges */
+}
+
+#sidebar::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    /* Darker on hover */
+}
+
+#map-view {
+    flex: 1;
+    height: 80vh;
+    position: relative;
+    background-color: #f0f0f0;
+}
+
+.card {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 15px 0;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.card-header {
+    background-color: var(--highlight-color);
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.card-body {
+    font-size: 18px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-footer {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 10px;
+    text-align: center;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--hover-color);
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+footer {
+    background-color: var(--footer-bg-color);
+    padding: 20px;
+    text-align: center;
+    color: var(--text-color);
+    font-size: 14px;
+}
+
+footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #map-view {
+        height: 60vh;
+    }
+}
+
+
+/* Logo style */
+#map-logo {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#map-logo img {
+    height: 40px;
+    /* Adjust logo size as needed */
+}
+
+
+.card-header h4 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+}
+
+
+.analytics-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* Analytics Section */
+.analytics-item .icon {
+    width: 30px;
+    /* Set a fixed size for the icon */
+    height: 30px;
+    /* Set a fixed size for the icon */
+    background-color: #f9f9f9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.analytics-item .icon img {
+    width: 20px;
+    /* Ensure the image fits within the icon size */
+    height: 20px;
+    /* Ensure the image fits within the icon size */
+    object-fit: contain;
+    /* Ensure the image keeps its aspect ratio */
+}
+
+.analytics-item .info {
+    flex-grow: 1;
+}
+
+.analytics-item .label {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.analytics-item .value {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.btn-view-more {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-view-more:hover {
+    background-color: #2980b9;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+.icon img {
+    width: 300%;
+    height: 150%;
+    border-radius: 50%;
+}
+
+.icon.selected {
+    border-color: #3498db;
+    transform: scale(1.2);
+}
+
+.layer-btns {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 20%;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-top: 10px;
+    cursor: pointer;
+    background: #e4ebf5;
+    color: var(--primary);
+    transition: all 0.2s ease;
+    margin-right: 20px;
+    border: none;
+}
+
+.layer-btns:hover {
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+}

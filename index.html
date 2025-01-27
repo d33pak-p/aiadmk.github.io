@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All India Anna Dravida Munnetra Kazhagam | WebGIS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>All India Anna Dravida Munnetra Kazhagam</h1>
+    <nav>
+      <a href="#">Home</a>
+      <!-- <a href="#">Map View</a> -->
+      <a href="#">Analytics</a>
+      <!-- <a href="#">Campaign Reports</a> -->
+      <!-- <a href="#">Settings</a> -->
+    </nav>
+  </header>
+
+  <main>
+    <div id="sidebar">
+      <!-- <div class="card">
+        <div class="card-header">Campaign Overview</div>
+        <div class="card-body">
+          <p>Voter Turnout: 75%</p>
+          <p>Constituencies Won: 65</p>
+        </div>
+        <div class="card-footer">
+          <button>View More</button>
+        </div>
+      </div> -->
+      <div class="card" style="
+      padding: 0;
+  ">
+        <div class="card-header">
+          Focus Area
+        </div>
+        <div class="card-body" style="padding: 4px;">
+          <select id="focusOption">
+            <option value="">All</option>
+            <option value="low">Low Members</option>
+            <option value="medium">Medium Members</option>
+            <option value="high">High Members</option>
+            <!-- Add more constituencies here -->
+          </select>
+        </div>
+      </div>
+      <!-- Volunteer Analytics Section -->
+      <div class="card">
+        <div class="card-header">
+          Member Analytics
+          <!-- <h4 class="card-title">Volunteer Analytics</h4> -->
+        </div>
+        <div class="card-body">
+          <div class="analytics-item">
+            <div class="icon">
+              <img src="icons/man.png" alt="Male Icon">
+            </div>
+            <div class="info">
+              <p class="label">Male Members</p>
+              <p class="value" id="male-volunteers">120</p>
+            </div>
+          </div>
+          <div class="analytics-item">
+            <div class="icon">
+              <img src="icons/girl.png" alt="Female Icon">
+            </div>
+            <div class="info">
+              <p class="label">Female Members</p>
+              <p class="value" id="female-volunteers">80</p>
+            </div>
+          </div>
+          <div class="analytics-item">
+            <div class="icon">
+              <img src="icons/male-female.png" alt="Total Icon">
+            </div>
+            <div class="info">
+              <p class="label">Total Members</p>
+              <p class="value" id="total-volunteers">200</p>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="card-footer">
+          <button class="btn-view-more">View More</button>
+        </div> -->
+      </div>
+
+
+      <!-- Constituency Filter -->
+      <div class="card">
+        <div class="card-header">Filter by Constituency</div>
+        <div class="card-body">
+          <select id="constituency-filter">
+            <option value="">Select Constituency</option>
+            <option value="constituency-1">Constituency 1</option>
+            <option value="constituency-2">Constituency 2</option>
+            <option value="constituency-3">Constituency 3</option>
+            <!-- Add more constituencies here -->
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div id="map-view">
+      <!-- The map will be rendered here by JavaScript -->
+      <div id="constituency-info"></div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 All India Anna Dravida Munnetra Kazhagam. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Contact
+        Us</a></p>
+  </footer>
+
+  <!-- Openlayers -->
+  <script type="text/javascript" src="assets/vendor/openlayers/dist/ol.js"></script>
+  <script src="assets/vendor/ol-ext-master/dist/ol-ext.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
